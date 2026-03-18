@@ -1,0 +1,127 @@
+{
+  "projectType": "saas",
+  "projectName": "Doss Panels",
+  "projectDescription": "A full-stack Laravel-based digital payment platform with multi-currency wallets, merchant management, deposits/withdrawals, money transfers, QR payments, and role-based admin and user dashboards.",
+  "theme": "linden",
+  "primaryColor": "#040404",
+  "lightColor": "#ef370f",
+  "darkColor": "#f79d72",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Overview",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "getting-started/installation", "getting-started/configuration", "getting-started/quickstart"]
+          },
+          {
+            "group": "Architecture",
+            "pages": ["architecture/overview", "architecture/modules", "architecture/roles-permissions"]
+          }
+        ]
+      },
+      {
+        "tab": "User Guide",
+        "groups": [
+          {
+            "group": "Account & Authentication",
+            "pages": ["user-guide/registration", "user-guide/login", "user-guide/two-factor-authentication", "user-guide/kyc-verification"]
+          },
+          {
+            "group": "Wallet & Transactions",
+            "pages": ["user-guide/wallets", "user-guide/deposit", "user-guide/withdrawal", "user-guide/money-transfer", "user-guide/currency-exchange", "user-guide/request-payment"]
+          },
+          {
+            "group": "Merchants",
+            "pages": ["user-guide/merchants/overview", "user-guide/merchants/cashiers", "user-guide/merchants/qr-payments", "user-guide/merchants/shifts"]
+          },
+          {
+            "group": "Other Features",
+            "pages": ["user-guide/invoices", "user-guide/disputes", "user-guide/tickets", "user-guide/groups", "user-guide/events"]
+          }
+        ]
+      },
+      {
+        "tab": "Admin Guide",
+        "groups": [
+          {
+            "group": "Dashboard",
+            "pages": ["admin-guide/dashboard", "admin-guide/user-management", "admin-guide/merchant-management"]
+          },
+          {
+            "group": "Finance",
+            "pages": ["admin-guide/transactions", "admin-guide/deposits", "admin-guide/withdrawals", "admin-guide/fees-limits"]
+          },
+          {
+            "group": "Settings",
+            "pages": ["admin-guide/currencies", "admin-guide/payment-methods", "admin-guide/notifications", "admin-guide/email-sms-config", "admin-guide/roles-permissions"]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": ["api/authentication", "api/registration"]
+          },
+          {
+            "group": "Profile",
+            "pages": ["api/profile"]
+          },
+          {
+            "group": "Transactions",
+            "pages": ["api/transactions", "api/deposit", "api/withdrawal", "api/send-money", "api/request-money", "api/exchange-money"]
+          },
+          {
+            "group": "QR Code",
+            "pages": ["api/qr-code"]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-currency digital wallets",
+    "Money transfer between users (email/phone/QR)",
+    "Deposit and withdrawal with multiple payment gateways (Stripe, PayPal, Bank, CoinPayments, Payeer)",
+    "Currency exchange with live rates",
+    "Merchant and cashier management with shift tracking",
+    "QR code-based payments (standard and express)",
+    "Invoice creation and management",
+    "Request payment (send/accept/cancel)",
+    "KYC document verification",
+    "Two-factor authentication (SMS and Google Authenticator)",
+    "Role-based access control with permissions",
+    "Admin dashboard with analytics and reporting",
+    "Group-based fund distribution",
+    "Event ticketing with cart and checkout",
+    "Dispute and support ticket management",
+    "Firebase push notifications",
+    "Activity logging and audit trail",
+    "Multi-language support"
+  ],
+  "publicApiSurface": [
+    "POST /api/login",
+    "POST /api/registration",
+    "POST /api/logout",
+    "GET /api/get-user-profile",
+    "POST /api/update-user-profile",
+    "GET /api/activityall",
+    "GET /api/transaction-details",
+    "GET /api/get-deposit-currency-list",
+    "POST /api/deposit/stripe-make-payment",
+    "POST /api/deposit/bank-payment-store",
+    "GET /api/get-withdraw-payment-method",
+    "POST /api/withdraw-money-pay",
+    "POST /api/send-money-pay",
+    "POST /api/request-money-pay",
+    "POST /api/exchange-money-complete",
+    "POST /api/perform-qr-code-operation",
+    "POST /api/perform-merchant-payment-qr-code-submit",
+    "GET /api/available-balance",
+    "POST /api/add-withdraw-setting",
+    "POST /api/profile-image-upload"
+  ]
+}
